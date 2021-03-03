@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Weather Bogotá
 
-    let url = 'http://api.openweathermap.org/data/2.5/weather?q=Bogota,col&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
+    let url = 'https://api.openweathermap.org/data/2.5/weather?q=Bogota,col&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
 
     const api = new XMLHttpRequest();
     api.open('GET', url, true);
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const parisWeather = () => {
 
-        let urlParis = 'http://api.openweathermap.org/data/2.5/weather?q=Paris,fra&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
+        let urlParis = 'https://api.openweathermap.org/data/2.5/weather?q=Paris,fra&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
 
         const apiParis = new XMLHttpRequest();
         apiParis.open('GET', urlParis, true);
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let hum = dataParis.main.humidity;
                 let wind = dataParis.wind.speed;
                 let icon = dataParis.weather[0].icon;
-                let urlIcon = `http://openweathermap.org/img/wn/${icon}@4x.png`
+                let urlIcon = `https://openweathermap.org/img/wn/${icon}@4x.png`
 
                 parisTemp.innerHTML = temp + '<sup>ºC</sup>';
                 parisHum.innerHTML = hum + ' %';
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const lyonWeather = () => {
 
-        let urlLyon = 'http://api.openweathermap.org/data/2.5/weather?q=Lyon,fra&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
+        let urlLyon = 'https://api.openweathermap.org/data/2.5/weather?q=Lyon,fra&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
 
         const apiLyon = new XMLHttpRequest();
         apiLyon.open('GET', urlLyon, true);
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let hum = dataLyon.main.humidity;
                 let wind = dataLyon.wind.speed;
                 let icon = dataLyon.weather[0].icon;
-                let urlIcon = `http://openweathermap.org/img/wn/${icon}@4x.png`
+                let urlIcon = `https://openweathermap.org/img/wn/${icon}@4x.png`
 
                 lyonTemp.innerHTML = temp + '<sup>ºC</sup>';
                 lyonHum.innerHTML = hum + ' %';
@@ -156,9 +156,9 @@ document.addEventListener("DOMContentLoaded", function () {
             let afterTomorrowI = dataForecast.daily[2].weather[0].icon;
             let pastTomorrowI = dataForecast.daily[3].weather[0].icon;
 
-            let innerIconT = `http://openweathermap.org/img/wn/${tomorrowI}@4x.png`
-            let innerIconA = `http://openweathermap.org/img/wn/${afterTomorrowI}@4x.png`
-            let innerIconP = `http://openweathermap.org/img/wn/${pastTomorrowI}@4x.png`
+            let innerIconT = `https://openweathermap.org/img/wn/${tomorrowI}@4x.png`
+            let innerIconA = `https://openweathermap.org/img/wn/${afterTomorrowI}@4x.png`
+            let innerIconP = `https://openweathermap.org/img/wn/${pastTomorrowI}@4x.png`
 
             tomorrowIcon.setAttribute('src', innerIconT);
             afterIcon.setAttribute('src', innerIconA);
