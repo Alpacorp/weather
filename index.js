@@ -16,12 +16,21 @@ const maxA = document.getElementById('maxA');
 const minA = document.getElementById('minA');
 const maxP = document.getElementById('maxP');
 const minP = document.getElementById('minP');
+const parisTemp = document.getElementById('parisTemp');
+const parisHum = document.getElementById('parisHum');
+const parisWind = document.getElementById('parisWind');
+const parisIcon = document.getElementById('parisIcon');
+const lyonTemp = document.getElementById('lyonTemp');
+const lyonHum = document.getElementById('lyonHum');
+const lyonWind = document.getElementById('lyonWind');
+const lyonIcon = document.getElementById('lyonIcon');
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
     // Weather Bogotá
 
-    let url = 'http://api.openweathermap.org/data/2.5/weather?q=Bogota,col&appid=d208aa4b84148290c0fa8b2b7c8e5a89&lang=es&units=metric';
+    let url = 'http://api.openweathermap.org/data/2.5/weather?q=Bogota,col&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
 
     const api = new XMLHttpRequest();
     api.open('GET', url, true);
@@ -45,25 +54,73 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Weather Paris
+    // Weather Paris, FRA
 
-    let urlParis = 'http://api.openweathermap.org/data/2.5/weather?q=Paris,fra&appid=d208aa4b84148290c0fa8b2b7c8e5a89&lang=es&units=metric';
+    const parisWeather = () => {
 
-    const apiParis = new XMLHttpRequest();
-    apiParis.open('GET', urlParis, true);
-    apiParis.send();
+        let urlParis = 'http://api.openweathermap.org/data/2.5/weather?q=Paris,fra&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
 
-    apiParis.onreadystatechange = function () {
-        if (this.status == 200 && this.readyState == 4) {
-            let dataParis = JSON.parse(this.responseText);
+        const apiParis = new XMLHttpRequest();
+        apiParis.open('GET', urlParis, true);
+        apiParis.send();
 
-            console.log(dataParis);
+        apiParis.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                let dataParis = JSON.parse(this.responseText);
+
+                console.log(dataParis);
+
+                let temp = dataParis.main.temp;
+                let hum = dataParis.main.humidity;
+                let wind = dataParis.wind.speed;
+                let icon = dataParis.weather[0].icon;
+                let urlIcon = `http://openweathermap.org/img/wn/${icon}@4x.png`
+
+                parisTemp.innerHTML = temp + '<sup>ºC</sup>';
+                parisHum.innerHTML = hum + ' %';
+                parisWind.innerHTML = wind + ' Km/h';
+                parisIcon.setAttribute('src', urlIcon);
+            }
         }
     }
 
+    parisWeather();
+
+    // Weather Lyon, FRA
+
+    const lyonWeather = () => {
+
+        let urlLyon = 'http://api.openweathermap.org/data/2.5/weather?q=Lyon,fra&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
+
+        const apiLyon = new XMLHttpRequest();
+        apiLyon.open('GET', urlLyon, true);
+        apiLyon.send();
+
+        apiLyon.onreadystatechange = function () {
+            if (this.status == 200 && this.readyState == 4) {
+                let dataLyon = JSON.parse(this.responseText);
+
+                console.log(dataLyon);
+
+                let temp = dataLyon.main.temp;
+                let hum = dataLyon.main.humidity;
+                let wind = dataLyon.wind.speed;
+                let icon = dataLyon.weather[0].icon;
+                let urlIcon = `http://openweathermap.org/img/wn/${icon}@4x.png`
+
+                lyonTemp.innerHTML = temp + '<sup>ºC</sup>';
+                lyonHum.innerHTML = hum + ' %';
+                lyonWind.innerHTML = wind + ' Km/h';
+                lyonIcon.setAttribute('src', urlIcon);
+            }
+        }
+    }
+
+    lyonWeather();
+
     // Weather Forecast
 
-    let urlForecast = 'https://api.openweathermap.org/data/2.5/onecall?lang=es&lat=4.6486259&lon=-74.2478948&exclude=hourly,minutely&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
+    let urlForecast = 'https://api.openweathermap.org/data/2.5/onecall?lat=4.6486259&lon=-74.2478948&exclude=hourly,minutely&appid=d208aa4b84148290c0fa8b2b7c8e5a89&units=metric';
 
     const apiForecast = new XMLHttpRequest();
     apiForecast.open('GET', urlForecast, true);
@@ -236,9 +293,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 default:
                     break;
             }
-
             dayPast.innerHTML = dayPastName;
         }
     }
-
 });

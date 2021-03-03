@@ -124,7 +124,7 @@
                     <div class="reviews-profile">
                         <img src="./assets/mujer-1.jpg" alt="foto de mujer">
                         <img src="./assets/mujer-2.jpeg" alt="foto de mujer">
-                        <img src="./assets/señor-gafas.jpeg" alt="foto de persona">
+                        <img src="./assets/senor-gafas.jpeg" alt="foto de persona">
                         <img src="./assets/joven.jpeg" alt="foto de persona">
                     </div>
                 </div>
@@ -164,11 +164,32 @@
                 <div class="card-first">
                     <div class="first-img">
                         <figure>
-                            <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="Icono estado del tiempo Lyon">
+                            <img id="parisIcon" src="" alt="Icono estado del tiempo Lyon">
                         </figure>
                     </div>
                     <div class="first-temperature">
-                        <h2>32<sup>ºC</sup></h2>
+                        <h2 id="parisTemp"></h2>
+                    </div>
+                    <div class="first-location">
+                        <h2>Paris</h2>
+                        <h3>Francia</h3>
+                    </div>
+                </div>
+                <div class="card-second">
+                    <h3>Humidity</h3><h4 id="parisHum"></h4>
+                    <h3>Wings</h3>
+                    <h3 id="parisWind"></h3>
+                </div>
+            </div>
+            <div class="countries-card">
+                <div class="card-first">
+                    <div class="first-img">
+                        <figure>
+                            <img id="lyonIcon" src="" alt="Icono estado del tiempo Lyon">
+                        </figure>
+                    </div>
+                    <div class="first-temperature">
+                        <h2 id="lyonTemp"></h2>
                     </div>
                     <div class="first-location">
                         <h2>Lyon</h2>
@@ -176,11 +197,12 @@
                     </div>
                 </div>
                 <div class="card-second">
-                    <h3>Humidity</h3><h4>64%</h4>
-                    <h3>Vientos</h3>
-                    <h3>8.3 Km/h</h3>
+                    <h3>Humidity</h3><h4 id="lyonHum"></h4>
+                    <h3>Wings</h3>
+                    <h3 id="lyonWind"></h3>
                 </div>
             </div>
+            <!-- prueba -->
             <div class="countries-card">
                 <div class="card-first">
                     <div class="first-img">
