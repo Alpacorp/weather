@@ -12,6 +12,10 @@ body {
   color: #717171;
 }
 
+.hide {
+  display: none;
+}
+
 .hero__img {
   margin: 20px 50px;
 }
@@ -485,7 +489,7 @@ sup {
   z-index: 1;
 }
 
-.content__countries h2 {
+.content__countries .countries {
   font-weight: 200;
 }
 

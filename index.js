@@ -41,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let data = JSON.parse(this.responseText);
 
-            console.log(data);
-
             let sky = data.weather[0].description;
             let temp = data.main.temp;
             let iconWeather = data.weather[0].icon;
@@ -67,8 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
         apiParis.onreadystatechange = function () {
             if (this.status == 200 && this.readyState == 4) {
                 let dataParis = JSON.parse(this.responseText);
-
-                console.log(dataParis);
 
                 let temp = dataParis.main.temp;
                 let hum = dataParis.main.humidity;
@@ -100,8 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.status == 200 && this.readyState == 4) {
                 let dataLyon = JSON.parse(this.responseText);
 
-                console.log(dataLyon);
-
                 let temp = dataLyon.main.temp;
                 let hum = dataLyon.main.humidity;
                 let wind = dataLyon.wind.speed;
@@ -129,10 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     apiForecast.onreadystatechange = function () {
         if (this.status == 200 && this.readyState == 4) {
             let dataForecast = JSON.parse(this.responseText);
-
-            console.log(dataForecast.daily);
-            console.log(dataForecast.daily[1].weather);
-            console.log(dataForecast.daily);
 
             // Get Day
 
