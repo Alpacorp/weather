@@ -546,4 +546,8 @@ sup {
 .content__countries .countries-card .card-second h3 {
   margin: 10px;
 }
+
+.content__countries .add figure img {
+  width: 230px;
+}
 /*# sourceMappingURL=style.css.map */
