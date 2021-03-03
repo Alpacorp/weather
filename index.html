@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="http://openweathermap.org/img/wn/01d@4x.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap" rel="stylesheet">
+    <title>Gradi Weather</title>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero__img">
+            <div>
+                <figure>
+                    <img src="./assets/bogota.jpg" alt="foto de Bogotá">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="weather">
+        <div class="weather__card">
+            <div class="card-now">
+                <div class="icon">
+                    <figure>
+                        <img id="iconDay" src="" alt="Estado tiempo figura clima">
+                    </figure>
+                    <h3 id="skyText"></h3>
+                </div>
+                <div class="temperature">
+                    <h3 id="temp"></h3>
+                </div>
+            </div>
+            <div class="card-location">
+                <div class="city">
+                    <figure>
+                        <img src="./assets/location-pin-white.png" alt="icono localización">
+                    </figure>
+                    <h3>Bogotá</h3>
+                </div>
+                <div class="map">
+                    <figure>
+                        <img src="./assets/bogota-blanco.png" alt="mapa Bogotá">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="content__forecast">
+            <h2><strong>3 Days</strong> Forecast</h2>
+            <div class="forecast-section">
+                <div class="forecast-card">
+                    <div class="card-weather">
+                        <div class="card-img">
+                            <figure>
+                                <img id="tomorrowIcon" src="" alt="Imagen pronostico tiempo">
+                            </figure>
+                        </div>
+                        <div class="card-date">
+                            <h2 id="tomorrow" class="card-day"></h2>
+                            <h4 id="tomorrowWeather" class="card-weather"></h4>
+                        </div>
+                    </div>
+                    <div class="card-temperature">
+                        <h2 id="maxT"></h2> <h2>/</h2> <h2 id="minT"></h2>
+                    </div>
+                </div>
+                <div class="forecast-card">
+                    <div class="card-weather">
+                        <div class="card-img">
+                            <figure>
+                                <img id="afterIcon" src="" alt="Imagen pronostico tiempo">
+                            </figure>
+                        </div>
+                        <div class="card-date">
+                            <h2 id="after" class="card-day"></h2>
+                            <h4 id="afterW" class="card-weather"></h4>
+                        </div>
+                    </div>
+                    <div class="card-temperature">
+                        <h2 id="maxA"></h2> <h2>/</h2> <h2 id="minA"></h2>
+                    </div>
+                </div>
+                <div class="forecast-card">
+                    <div class="card-weather">
+                        <div class="card-img">
+                            <figure>
+                                <img id="pastIcon" src="" alt="Imagen pronostico tiempo">
+                            </figure>
+                        </div>
+                        <div class="card-date">
+                            <h2 id="past" class="card-day"></h2>
+                            <h4 id="pastW" class="card-weather"></h4>
+                        </div>
+                    </div>
+                    <div class="card-temperature">
+                        <h2 id="maxP"></h2> <h2>/</h2> <h2 id="minP">31<sup>ºC</sup></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content__place">
+            <h2><strong>Place to</strong> visit</h2>
+            <div class="place">
+                <div class="place-title">
+                    <img src="./assets/location-pin-white.png" alt="icono de localización blanco">
+                    <h3>Amsterdam</h3>
+                </div>
+                <div class="place-img">
+                    <figure>
+                        <img src="./assets/amsterdam.jpg" alt="Foto de Amsterdam">
+                    </figure>
+                </div>
+            </div>
+        </div>
+        <div class="content__reviews">
+            <div>
+                <div class="reviews-title">
+                    <img class="title-plus" src="./assets/plus.png" alt="icono plus">
+                    <h2>Top Reviews</h2>
+                    <div class="reviews-profile">
+                        <img src="./assets/mujer-1.jpg" alt="foto de mujer">
+                        <img src="./assets/mujer-2.jpeg" alt="foto de mujer">
+                        <img src="./assets/señor-gafas.jpeg" alt="foto de persona">
+                        <img src="./assets/joven.jpeg" alt="foto de persona">
+                    </div>
+                </div>
+                <div class="reviews-section">
+                    <div class="section-first">
+                        <div class="title">
+                            <img src="./assets/location-pin-white.png" alt="icono localización">
+                            <h3>Art Science <br> Museum</h3>
+                        </div>
+                        <div class="img">
+                            <figure>
+                                <img src="./assets/museo.jpg" alt="foto de museo">
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="section-second">
+                        <div class="title">
+                            <img src="./assets/location-pin-white.png" alt="icono localización">
+                            <h3>Fountain <br>in Hearth</h3>
+                            <div class="plus">
+                                <img class="img-plus" src="./assets/plus-white.png">
+                            </div>
+                        </div>
+                        <div class="img">
+                            <div class="img-main">
+                                <figure>
+                                    <img src="./assets/mirador.jpg" alt="foto de mirador">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content__countries">
+            <div class="countries-card">
+                <div class="card-first">
+                    <div class="first-img">
+                        <figure>
+                            <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="Icono estado del tiempo Lyon">
+                        </figure>
+                    </div>
+                    <div class="first-temperature">
+                        <h2>32<sup>ºC</sup></h2>
+                    </div>
+                    <div class="first-location">
+                        <h2>Lyon</h2>
+                        <h3>Francia</h3>
+                    </div>
+                </div>
+                <div class="card-second">
+                    <h3>Humidity</h3><h4>64%</h4>
+                    <h3>Vientos</h3>
+                    <h3>8.3 Km/h</h3>
+                </div>
+            </div>
+            <div class="countries-card">
+                <div class="card-first">
+                    <div class="first-img">
+                        <figure>
+                            <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="Icono estado del tiempo Lyon">
+                        </figure>
+                    </div>
+                    <div class="first-temperature">
+                        <h2>32<sup>ºC</sup></h2>
+                    </div>
+                    <div class="first-location">
+                        <h2>Lyon</h2>
+                        <h3>Francia</h3>
+                    </div>
+                </div>
+                <div class="card-second">
+                    <h3>Humidity</h3><h4>64%</h4>
+                    <h3>Vientos</h3>
+                    <h3>8.3 Km/h</h3>
+                </div>
+            </div>
+            <div class="countries-card">
+                <div class="card-first">
+                    <div class="first-img">
+                        <figure>
+                            <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="Icono estado del tiempo Lyon">
+                        </figure>
+                    </div>
+                    <div class="first-temperature">
+                        <h2>32<sup>ºC</sup></h2>
+                    </div>
+                    <div class="first-location">
+                        <h2>Lyon</h2>
+                        <h3>Francia</h3>
+                    </div>
+                </div>
+                <div class="card-second">
+                    <h3>Humidity</h3><h4>64%</h4>
+                    <h3>Vientos</h3>
+                    <h3>8.3 Km/h</h3>
+                </div>
+            </div>
+            <div class="countries-card">
+                <div class="card-first">
+                    <div class="first-img">
+                        <figure>
+                            <img src="http://openweathermap.org/img/wn/01d@4x.png" alt="Icono estado del tiempo Lyon">
+                        </figure>
+                    </div>
+                    <div class="first-temperature">
+                        <h2>32<sup>ºC</sup></h2>
+                    </div>
+                    <div class="first-location">
+                        <h2>Lyon</h2>
+                        <h3>Francia</h3>
+                    </div>
+                </div>
+                <div class="card-second">
+                    <h3>Humidity</h3><h4>64%</h4>
+                    <h3>Vientos</h3>
+                    <h3>8.3 Km/h</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="inverted-border-radius"></div> -->
+    <script src="index.js"></script>
+</body>
+</html>
