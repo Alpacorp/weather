@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let sky = data.weather[0].description;
             let temp = data.main.temp;
             let iconWeather = data.weather[0].icon;
-            let innerIcon = `http://openweathermap.org/img/wn/${iconWeather}@4x.png`
+            let innerIcon = `https://openweathermap.org/img/wn/${iconWeather}@4x.png`
 
             skyText.innerHTML = sky;
             tem.innerHTML = temp + '<sup>Cº</sup>';
