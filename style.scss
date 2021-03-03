@@ -339,6 +339,12 @@ sup{
 .content__countries{
     margin: -80px 20px 0 20px;
     z-index: 1;
+    & h2{
+        font-weight: 200;
+    }
+    & .countries{
+        display: none;
+    }
     & .countries-card{
         background-color: #ffffff;
         border-radius: 15px;
@@ -385,6 +391,79 @@ sup{
         & figure{
             & img{
                 width: 230px;
+            }
+        }
+    }
+}
+
+// Media Queries
+
+@media screen and(max-width:1430px){
+    .content__countries{
+        & .countries{
+            display: block;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and(max-width:1389px){
+    .countries{
+        display: block;
+    }
+}
+
+@media screen and(max-width:850px){
+    .weather{
+        position: absolute;
+        top: 100px;
+    }
+    .hero__img{
+        & figure{
+            & img{
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:600px){
+    .hero__img{
+        margin: 20px 20px;
+        & figure{
+            & img{
+                height: 300px;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:420px){
+    .hero__img{
+        margin: 20px 20px;
+        & figure{
+            & img{
+                height: 300px;
+            }
+        }
+    }
+    .content__place{
+        & .place-img{
+            & figure{
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .content__reviews{
+        & .reviews-section{
+            & .section-first{
+                & .img{
+                    & img{
+                        width: 100%;
+                    }
+                }
             }
         }
     }

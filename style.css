@@ -484,6 +484,14 @@ sup {
   z-index: 1;
 }
 
+.content__countries h2 {
+  font-weight: 200;
+}
+
+.content__countries .countries {
+  display: none;
+}
+
 .content__countries .countries-card {
   background-color: #ffffff;
   border-radius: 15px;
@@ -549,5 +557,52 @@ sup {
 
 .content__countries .add figure img {
   width: 230px;
+}
+
+@media screen and (max-width: 1430px) {
+  .content__countries .countries {
+    display: block;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1389px) {
+  .countries {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .weather {
+    position: absolute;
+    top: 100px;
+  }
+  .hero__img figure img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero__img {
+    margin: 20px 20px;
+  }
+  .hero__img figure img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero__img {
+    margin: 20px 20px;
+  }
+  .hero__img figure img {
+    height: 300px;
+  }
+  .content__place .place-img figure img {
+    width: 100%;
+  }
+  .content__reviews .reviews-section .section-first .img img {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
