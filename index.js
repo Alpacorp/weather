@@ -192,10 +192,10 @@ document.addEventListener("DOMContentLoaded", function () {
             let dateAfter = new Date(afterTimestamp);
             let datePast = new Date(pastTimestamp);
 
-            let dateDay = dateTomorrow.getDate();
+            let dateDay = dateTomorrow.getDay();
 
             switch (dateDay) {
-                case 7:
+                case 0:
                     dayTomorrowName = days[0]
                     break;
                 case 1:
@@ -224,10 +224,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             dayAfterName = '';
 
-            let dateAfterDay = dateAfter.getDate();
+            let dateAfterDay = dateAfter.getDay();
 
             switch (dateAfterDay) {
-                case 7:
+                case 0:
                     dayAfterName = days[0]
                     break;
                 case 1:
@@ -256,10 +256,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             dayPastName = '';
 
-            let datePastDay = datePast.getDate();
+            let datePastDay = datePast.getDay();
 
             switch (datePastDay) {
-                case 7:
+                case 0:
                     dayPastName = days[0]
                     break;
                 case 1:
@@ -283,7 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 default:
                     break;
             }
-            console.log(datePastDay);
             dayPast.innerHTML = dayPastName;
         }
     }
